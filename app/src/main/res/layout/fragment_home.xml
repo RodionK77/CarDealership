@@ -28,15 +28,70 @@
         android:layout_marginTop="20dp"
         app:cardBackgroundColor="@color/card_background"
         app:cardElevation="25dp"
-        android:outlineAmbientShadowColor="@color/card_red"
-        android:outlineSpotShadowColor="@color/card_red">
-        <TextView
-            android:id="@+id/info_text"
+        android:outlineAmbientShadowColor="@color/card_red_shadow"
+        android:outlineSpotShadowColor="@color/card_red_shadow">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_vertical|center_horizontal|top"
-            android:text="Карточка на кота Василия"
-            android:textSize="36sp" />
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_card0"
+            android:layout_width="205dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:text="Предложение\nДНЯ!"
+            android:textColor="@color/card_red"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/brand_card0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="start"
+                    android:text="KIA Telluride"
+                    android:textColor="@color/items_color"
+                    android:textSize="24dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/price_card0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:gravity="start"
+                    android:text="от 1 750 000 ₽"
+                    android:textColor="@color/items_color"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_card0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/kia_tellurida_foreground"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <LinearLayout
@@ -58,9 +113,9 @@
                 android:layout_marginStart="21dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="@color/card_background"
-                app:cardElevation="10dp"
-                android:outlineAmbientShadowColor="@color/card_green"
-                android:outlineSpotShadowColor="@color/card_green">
+                app:cardElevation="25dp"
+                android:outlineAmbientShadowColor="@color/card_green_shadow"
+                android:outlineSpotShadowColor="@color/card_green_shadow">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -97,14 +152,38 @@
                 android:layout_marginStart="21dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="@color/card_background"
-                android:layout_marginTop="20dp" >
-                <TextView
-                    android:id="@+id/info_text2"
+                android:layout_marginTop="20dp"
+                app:cardElevation="25dp"
+                android:outlineAmbientShadowColor="@color/card_blue_shadow"
+                android:outlineSpotShadowColor="@color/card_blue_shadow"
+                android:clickable="true">
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical|center_horizontal|top"
-                    android:text="Карточка на кота Василия"
-                    android:textSize="36sp" />
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_card3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start"
+                        android:text="Любимый\nпомощник"
+                        android:textColor="@color/card_blue"
+                        android:textSize="26dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_card3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:scaleType="fitXY"
+                        android:scaleY="2"
+                        android:src="@mipmap/card3_foreground" />
+
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
@@ -122,14 +201,37 @@
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="20dp"
                 app:cardCornerRadius="25dp"
-                app:cardBackgroundColor="@color/card_background">
-                <TextView
-                    android:id="@+id/info_text3"
+                app:cardBackgroundColor="@color/card_background"
+                app:cardElevation="25dp"
+                android:outlineAmbientShadowColor="@color/card_yellow_shadow"
+                android:outlineSpotShadowColor="@color/card_yellow_shadow">
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical|center_horizontal|top"
-                    android:text="Карточка на кота Василия"
-                    android:textSize="36sp" />
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_card2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start"
+                        android:text="Культовая\nКЛАССИКА"
+                        android:textColor="@color/card_yellow"
+                        android:textSize="26dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:scaleType="fitXY"
+                        android:scaleY="2"
+                        android:src="@mipmap/card2_foreground" />
+
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -139,24 +241,40 @@
                 android:layout_marginStart="15dp"
                 app:cardCornerRadius="25dp"
                 app:cardBackgroundColor="@color/card_background"
-                android:layout_marginTop="20dp" >
-                <TextView
-                    android:id="@+id/info_text4"
+                android:layout_marginTop="20dp"
+                app:cardElevation="25dp"
+                android:outlineAmbientShadowColor="@color/card_orange_shadow"
+                android:outlineSpotShadowColor="@color/card_orange_shadow">
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical|center_horizontal|top"
-                    android:text="Карточка на кота Василия"
-                    android:textSize="36sp" />
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_card4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="start"
+                        android:text="Всегда\nдля души"
+                        android:textColor="@color/card_orange"
+                        android:textSize="28dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/iv_card4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:scaleType="fitXY"
+                        android:scaleY="2"
+                        android:src="@mipmap/card4_foreground" />
+
+                </LinearLayout>
             </androidx.cardview.widget.CardView>
         </LinearLayout>
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:textSize="20sp" />
 
 </LinearLayout>

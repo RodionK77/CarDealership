@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.cardealership.R;
 import com.example.cardealership.databinding.FragmentSearchBinding;
 
 public class SearchFragment extends Fragment {
@@ -19,22 +20,12 @@ public class SearchFragment extends Fragment {
     private SearchViewModel searchViewModel;
     private FragmentSearchBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        searchViewModel =
-                new ViewModelProvider(this).get(SearchViewModel.class);
-
-        binding = FragmentSearchBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textDashboard;
-        searchViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //searchViewModel = new ViewModelProvider(this).get(SearchViewModel.class);
+        return inflater.inflate(R.layout.fragment_search, container, false);
+        //binding = FragmentSearchBinding.inflate(inflater, container, false);
+        //View root = binding.getRoot();
+        //return root;
     }
 
     @Override

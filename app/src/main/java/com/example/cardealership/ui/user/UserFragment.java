@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.cardealership.R;
 import com.example.cardealership.databinding.FragmentUserBinding;
 
 public class UserFragment extends Fragment {
@@ -19,22 +20,17 @@ public class UserFragment extends Fragment {
     private UserViewModel userViewModel;
     private FragmentUserBinding binding;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        userViewModel =
-                new ViewModelProvider(this).get(UserViewModel.class);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
-        binding = FragmentUserBinding.inflate(inflater, container, false);
-        View root = binding.getRoot();
-
-        final TextView textView = binding.textNotifications;
-        userViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
-        return root;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+        return inflater.inflate(R.layout.fragment_user, container, false);
+        //binding = FragmentUserBinding.inflate(inflater, container, false);
+        //View root = binding.getRoot();
+        //return root;
     }
 
     @Override

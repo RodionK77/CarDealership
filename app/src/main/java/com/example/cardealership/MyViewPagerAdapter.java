@@ -8,9 +8,11 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
+import com.example.cardealership.ui.ControlFragment;
+import com.example.cardealership.ui.entrance.EntranceFragment;
 import com.example.cardealership.ui.home.HomeFragment;
+import com.example.cardealership.ui.registration.RegistrationFragment;
 import com.example.cardealership.ui.search.SearchFragment;
-import com.example.cardealership.ui.user.UserFragment;
 
 public class MyViewPagerAdapter extends FragmentStateAdapter {
     private static final int NUM_PAGES = 3;
@@ -28,7 +30,7 @@ public class MyViewPagerAdapter extends FragmentStateAdapter {
             case 1:
                 return new SearchFragment();
             case 2:
-                return new UserFragment();
+                return new ControlFragment();
             default:
                 return null;
         }

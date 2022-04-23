@@ -22,4 +22,12 @@
         android:name="com.example.cardealership.ui.user.UserFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_user" />
+    <fragment
+        android:id="@+id/administrator"
+        android:name="com.example.cardealership.ui.registration.RegistrationAdminFragment"
+        android:label="Administrator" />
+    <fragment
+        android:id="@+id/simpleUser"
+        android:name="com.example.cardealership.ui.registration.RegistrationUserFragment"
+        android:label="SimpleUser" />
 </navigation>
