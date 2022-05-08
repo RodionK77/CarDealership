@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_rv_card"
+        android:layout_width="370dp"
+        android:layout_height="152dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="@color/card_background">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="174dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/rv_card_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:text="Skoda Rapid II"
+                    android:textStyle="bold"
+                    android:textSize="16dp"
+                    android:textColor="@color/items_color">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/iv_rv_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/kia_tellurida_foreground"
+                    android:background="@drawable/rv_card_background"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="126dp"
+                android:background="@color/items_color_glass"
+                android:layout_gravity="center"/>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_card_left_top"
+                android:layout_width="174dp"
+                android:layout_height="24dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/initials_background"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/rv_card_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="1 214 000 ₽"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:textColor="@color/items_color">
+                </TextView>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_card_left_bottom"
+                android:layout_width="174dp"
+                android:layout_height="95dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="@color/initials_background"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/rv_card_engine_capacity_power"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingTop="5dp"
+                            android:paddingStart="20dp"
+                            android:text="Бензин\n1.6 л.\n110 л. с."
+                            android:textStyle="normal"
+                            android:textSize="12dp"
+                            android:textColor="@color/items_color">
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/rv_card_drive_transmission_body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingStart="20dp"
+                            android:text="Передний\nАвтомат\nЛифтбек"
+                            android:textStyle="normal"
+                            android:textSize="12dp"
+                            android:textColor="@color/items_color">
+                        </TextView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_bookmark"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_bookmark_false" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

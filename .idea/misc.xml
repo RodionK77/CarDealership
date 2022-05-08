@@ -19,6 +19,7 @@
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/drawable/ic_user.xml" value="0.3828125" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/drawable/nav_background_curved.xml" value="0.3828125" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/drawable/rounded_button.xml" value="0.3828125" />
+        <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/drawable/rv_card_background.xml" value="0.37037037037037035" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/drawable/selector.xml" value="0.3828125" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/drawable/shadow_background_green.xml" value="0.3828125" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
@@ -33,8 +34,9 @@
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/layout/fragment_registration_admin.xml" value="0.360054347826087" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/layout/fragment_registration_user.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/layout/fragment_resitration_user.xml" value="0.360054347826087" />
-        <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/layout/fragment_search.xml" value="0.360054347826087" />
+        <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/layout/fragment_search.xml" value="0.29608938547486036" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/layout/fragment_user.xml" value="0.33" />
+        <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/layout/rv_card_car.xml" value="0.33" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/mipmap-anydpi-v26/card2.xml" value="0.3769230769230769" />
         <entry key="..\:/AndroidProjects/CarDealership/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
