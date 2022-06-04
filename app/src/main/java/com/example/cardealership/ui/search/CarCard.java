@@ -1,6 +1,8 @@
 package com.example.cardealership.ui.search;
 
-public class CarCard {
+import java.io.Serializable;
+
+public class CarCard implements Serializable {
     protected int index;
     protected String brand;
     protected String name;

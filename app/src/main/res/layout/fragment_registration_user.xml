@@ -118,12 +118,15 @@
                 android:layout_marginEnd="20dp" />
 
             <Button
+                android:id="@+id/btn_user_registration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="8dp"
-                android:text="Зарегестрироваться"
+                android:text="Зарегистрироваться"
                 android:textSize="16dp"
+                android:padding="10dp"
+                android:backgroundTint="@color/items_color"
                 android:textColor="@color/button_green"
                 android:textAllCaps="false"
                 android:background="@drawable/rounded_button"/>

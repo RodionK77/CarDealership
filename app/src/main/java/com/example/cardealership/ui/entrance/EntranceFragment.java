@@ -25,6 +25,7 @@ public class EntranceFragment extends Fragment {
         View RootView = inflater.inflate(R.layout.fragment_entrance, container, false);
         Button btnUser = (Button)RootView.findViewById(R.id.btn_user);
         Button btnAdmin = (Button)RootView.findViewById(R.id.btn_admin);
+        Button btnDev = (Button)RootView.findViewById(R.id.btn_dev);
         Button btnToRegistration = (Button)RootView.findViewById(R.id.btn_toRegistration);
         EntranceUserFragment userFr = new EntranceUserFragment();
         FragmentManager fragmentManager = getParentFragmentManager();
@@ -42,6 +43,13 @@ public class EntranceFragment extends Fragment {
             public void onClick(View view) {
                 EntranceAdminFragment userAdmin = new EntranceAdminFragment();
                 fragmentManager.beginTransaction().replace(R.id.entr_fr, userAdmin).commit();
+            }
+        });
+        btnDev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EntranceDevFragment userDev = new EntranceDevFragment();
+                fragmentManager.beginTransaction().replace(R.id.entr_fr, userDev).commit();
             }
         });
         btnToRegistration.setOnClickListener(new View.OnClickListener() {

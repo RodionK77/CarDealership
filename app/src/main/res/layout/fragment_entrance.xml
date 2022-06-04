@@ -41,13 +41,13 @@
                 android:layout_height="wrap_content"
                 app:checkedButton="@id/btn_user"
                 app:singleSelection="true"
-                android:scaleY="0.8"
-                android:scaleX="0.8">
+                android:scaleY="0.9"
+                android:scaleX="0.9">
 
                 <Button
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:id="@+id/btn_user"
-                    android:textSize="14dp"
+                    android:textSize="12dp"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -57,12 +57,23 @@
                 <Button
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:id="@+id/btn_admin"
-                    android:textSize="14dp"
+                    android:textSize="12dp"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:textAllCaps="false"
                     android:text="Администратор" />
+
+                <Button
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:id="@+id/btn_dev"
+                    android:textSize="12dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="Разработчик" />
+
 
             </com.google.android.material.button.MaterialButtonToggleGroup>
 
@@ -81,6 +92,8 @@
                 android:layout_marginTop="5dp"
                 android:text="Регистрация"
                 android:textSize="14dp"
+                android:padding="10dp"
+                android:backgroundTint="@color/items_color"
                 android:textColor="@color/button_red"
                 android:textAllCaps="false"
                 android:background="@drawable/rounded_button"/>

@@ -29,7 +29,8 @@
         app:menu="@menu/bottom_nav_menu"
         app:labelVisibilityMode="unlabeled"
         app:itemIconSize="45dp"
-        app:itemIconTint="@drawable/selector"/>
+        app:itemIconTint="@drawable/selector"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"/>
 
     <!-- <fragment
         android:id="@+id/nav_host_fragment_activity_main"

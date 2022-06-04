@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "887793998213",
+    "project_id": "cardealerhipusers",
+    "firebase_url": "https://cardealerhipusers-default-rtdb.europe-west1.firebasedatabase.app",
+    "storage_bucket": "cardealerhipusers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887793998213:android:79dee136602054e1c58cec",
+        "android_client_info": {
+          "package_name": "com.example.cardealership"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887793998213-0f5h0tqai6oinnescoot520tijtbh0gg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiT71p0tbP6y_-ump_13HPCy22EPViMMA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887793998213-0f5h0tqai6oinnescoot520tijtbh0gg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -12,7 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CarDealership">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.account.Settings"
+            android:exported="true" />
+        <activity
+            android:name=".ui.account.UsersList"
+            android:exported="true" />
+        <activity
+            android:name=".ui.account.Favorites"
+            android:exported="true" />
+        <activity
+            android:name=".ui.CarInfo"
+            android:exported="true" />
+        <activity
+            android:name=".ui.home.CarCompilation"
+            android:exported="true" />
+        <activity
+            android:name=".ui.MainActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true"
             android:label="@string/app_name">

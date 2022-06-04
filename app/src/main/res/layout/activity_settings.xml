@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/background_grey">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="370dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/toolbar_s"
+        android:background="@drawable/action_bar_background"
+        app:title="Настройки"
+        android:textAlignment="center"
+        android:gravity="center"
+        app:titleTextColor="@color/items_color">
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_registration"
+        android:layout_width="370dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/card_background">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/tv_registration_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Личные данные"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/items_color"
+                android:textSize="16dp" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Имя"
+                        android:textSize="14dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Фамилия"
+                        android:textSize="14dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="День рождения"
+                        android:textSize="14dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Почта"
+                        android:textSize="14dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Телефон"
+                        android:textSize="14dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/et_settings_name"
+                        android:text="Имя"
+                        android:textSize="12dp"
+                        android:maxLength="20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/et_settings_lastname"
+                        android:text="Фамилия"
+                        android:textSize="12dp"
+                        android:maxLength="20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"/>
+
+                    <EditText
+                        android:id="@+id/et_settings_date"
+                        android:text="День рождения"
+                        android:textSize="12dp"
+                        android:inputType="date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="20dp" />
+
+                    <EditText
+                        android:id="@+id/et_settings_mail"
+                        android:text="Почта"
+                        android:textSize="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="20dp" />
+
+                    <EditText
+                        android:id="@+id/et_settings_phone"
+                        android:text="Телефон"
+                        android:inputType="phone"
+                        android:textSize="12dp"
+                        android:maxLength="15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="20dp" />
+
+                </LinearLayout>
+
+                <!--<EditText
+                    android:id="@+id/et_user_name"
+                    android:hint="Имя*"
+                    android:textSize="12dp"
+                    android:maxLength="20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/et_user_lastname"
+                    android:hint="Фамилия*"
+                    android:textSize="12dp"
+                    android:maxLength="20"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"/>-->
+
+            </LinearLayout>
+
+            <!--<EditText
+                android:id="@+id/et_user_date"
+                android:hint="День рождения*"
+                android:textSize="12dp"
+                android:inputType="date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+            <EditText
+                android:id="@+id/et_user_phone"
+                android:hint="Телефон*"
+                android:inputType="phone"
+                android:textSize="12dp"
+                android:maxLength="15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+            <EditText
+                android:id="@+id/et_user_mail"
+                android:hint="Почта*"
+                android:textSize="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <EditText
+                android:id="@+id/et_user_password"
+                android:inputType="textPassword"
+                android:hint="Пароль*"
+                android:textSize="12dp"
+                android:drawableRight="@drawable/ic_visibility_off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />
+
+            <EditText
+                android:id="@+id/et_user_password2"
+                android:inputType="textPassword"
+                android:hint="Повторите пароль*"
+                android:textSize="12dp"
+                android:drawableRight="@drawable/ic_visibility_off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp" />-->
+
+            <Button
+                android:id="@+id/btn_user_settings"
+                android:onClick="onPush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="15dp"
+                android:text="Внести изменения"
+                android:textSize="16dp"
+                android:padding="10dp"
+                android:backgroundTint="@color/items_color"
+                android:textColor="@color/button_green"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_button"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="выйти из акканута"
+        android:backgroundTint="@color/button_red">
+
+    </Button>
+
+</LinearLayout>

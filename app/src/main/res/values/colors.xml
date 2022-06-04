@@ -28,4 +28,7 @@
     <color name="registration_background">#b1e5b1</color>
     <color name="button_green">#aaf67c</color>
     <color name="button_red">#ed5457</color>
+    <color name="text_field">#8C0D2080</color>
+    <color name="mark_false">#07124B</color>
+    <color name="mark_true">#D87A7A</color>
 </resources>

@@ -16,6 +16,47 @@
         android:layout_gravity="right"
         android:text="Read DB" />-->
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_sort1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сортировать цену\nпо возрастанию"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:backgroundTint="@color/card_background">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_sort2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сортировать цену\nпо убыванию"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="10dp"
+            android:backgroundTint="@color/card_background">
+        </Button>
+
+        <Button
+            android:id="@+id/btn_sort3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сортировать\nпо алфавиту"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="10dp"
+            android:backgroundTint="@color/card_background">
+        </Button>
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_cars"
         android:layout_width="match_parent"

@@ -1,29 +1,19 @@
-package com.example.cardealership;
+package com.example.cardealership.ui;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.example.cardealership.ui.home.HomeFragment;
-import com.example.cardealership.ui.search.SearchFragment;
-import com.example.cardealership.ui.user.UserFragment;
+import com.example.cardealership.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.cardealership.databinding.ActivityMainBinding;
-
-import org.jetbrains.annotations.NotNull;
 
 public class MainActivity extends AppCompatActivity {
 

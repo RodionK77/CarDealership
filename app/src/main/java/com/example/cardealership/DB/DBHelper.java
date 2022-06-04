@@ -1,11 +1,9 @@
-package com.example.cardealership;
+package com.example.cardealership.DB;
 
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-
-import com.example.cardealership.ui.search.SearchFragment;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -17,7 +15,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     private static String DB_NAME = "Cars.db";
     private static String DB_PATH = "";
-    private static final int DB_VERSION = 3;
+    private static final int DB_VERSION = 7;
 
     private SQLiteDatabase mDataBase;
     private final Context mContext;
