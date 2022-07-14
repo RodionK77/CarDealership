@@ -17,7 +17,7 @@ import com.example.cardealership.ui.search.SearchFragment;
 public class MyViewPagerAdapter extends FragmentStateAdapter {
     private static final int NUM_PAGES = 3;
 
-    public MyViewPagerAdapter(FragmentActivity mainActivity) {
+    public MyViewPagerAdapter(MainActivity mainActivity) {
         super(mainActivity);
     }
 

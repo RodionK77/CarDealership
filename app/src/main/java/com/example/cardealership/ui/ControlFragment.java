@@ -1,6 +1,5 @@
 package com.example.cardealership.ui;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,10 +21,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.io.Serializable;
 
@@ -35,13 +32,18 @@ public class ControlFragment extends Fragment implements Serializable {
     Context context;
     private FirebaseAuth mAuth;
     private DatabaseReference mDataBase;
+    private Callbacks callbacks = null;
     FirebaseUser currentUser;
     User user;
 
-    @Override
+    /*@Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         context=activity;
+    }*/
+
+    public Callbacks getCallbacks(){
+        return this.callbacks;
     }
 
     @Override
@@ -57,6 +59,19 @@ public class ControlFragment extends Fragment implements Serializable {
         //userCheck();
 
         return RootView;
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
+        callbacks = (Callbacks) context;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        callbacks = null;
     }
 
     public static void changeFragmentToRegistration(){
@@ -86,12 +101,19 @@ public class ControlFragment extends Fragment implements Serializable {
                 public void onComplete(@NonNull Task<DataSnapshot> task) {
                     if (!task.isSuccessful()) {
                         Toast.makeText(context,"Ошибка доступа", Toast.LENGTH_SHORT).show();
-                        changeFragmentToRegistration();
+                        RegistrationFragment fr = new RegistrationFragment();
+                        callbacks.controlFragmentSelected(fr);
+                        //changeFragmentToRegistration();
                     }
                     else {
                         user = (User)task.getResult().getValue(User.class);
                         //Toast.makeText(context,user.getName(), Toast.LENGTH_SHORT).show();
-                        changeFragmentToUser(user);
+                        UserFragment fr = new UserFragment();
+                        Bundle bundle = new Bundle();
+                        bundle.putSerializable("1", user);
+                        fr.setArguments(bundle);
+                        callbacks.controlFragmentSelected(fr);
+                        //changeFragmentToUser(user);
                     }
                 }
             });
@@ -99,7 +121,9 @@ public class ControlFragment extends Fragment implements Serializable {
             //Toast.makeText(context,user.getUid(), Toast.LENGTH_SHORT).show();
             //changeFragmentToUser(user);
         } else {
-            changeFragmentToRegistration();
+            RegistrationFragment fr = new RegistrationFragment();
+            callbacks.controlFragmentSelected(fr);
+            //changeFragmentToRegistration();
         }
     }
 

@@ -9,24 +9,28 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.cardealership.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Callbacks {
 
     private ActivityMainBinding binding;
     private ViewPager2 viewPager2;
     private FragmentStateAdapter pagerAdapter;
     private BottomNavigationView navView;
+    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        fragmentManager = getSupportFragmentManager();
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.hide();
@@ -82,4 +86,8 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);*/
     }
 
+    @Override
+    public void controlFragmentSelected(Fragment fragment) {
+        fragmentManager.beginTransaction().replace(R.id.control_fr, fragment).commit();
+    }
 }
