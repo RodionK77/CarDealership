@@ -74,7 +74,7 @@ public class ControlFragment extends Fragment implements Serializable {
         callbacks = null;
     }
 
-    public static void changeFragmentToRegistration(){
+    /*public static void changeFragmentToRegistration(){
         RegistrationFragment fr = new RegistrationFragment();
         fragmentManager.beginTransaction().replace(R.id.control_fr, fr).commit();
     }
@@ -89,7 +89,7 @@ public class ControlFragment extends Fragment implements Serializable {
         bundle.putSerializable("1", user);
         fr.setArguments(bundle);
         fragmentManager.beginTransaction().replace(R.id.control_fr, fr).commit();
-    }
+    }*/
 
     public void userCheck(){
         mAuth = FirebaseAuth.getInstance();

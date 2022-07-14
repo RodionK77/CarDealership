@@ -18,8 +18,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.cardealership.R;
+import com.example.cardealership.ui.Callbacks;
 import com.example.cardealership.ui.ControlFragment;
 import com.example.cardealership.ui.account.User;
+import com.example.cardealership.ui.account.UserFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -39,6 +41,7 @@ public class EntranceUserFragment extends Fragment {
     DatabaseReference mDataBase;
     User user;
     FirebaseUser currentUser;
+    private Callbacks callbacks = null;
 
     @Override
     public void onAttach(Activity activity) {
@@ -74,18 +77,27 @@ public class EntranceUserFragment extends Fragment {
                                     public void onComplete(@NonNull Task<DataSnapshot> task) {
                                         if (!task.isSuccessful()) {
                                             Toast.makeText(context,"Ошибка доступа", Toast.LENGTH_SHORT).show();
-                                            ControlFragment.changeFragmentToEntrance();
+                                            EntranceFragment fr = new EntranceFragment();
+                                            callbacks.controlFragmentSelected(fr);
+                                            //ControlFragment.changeFragmentToEntrance();
                                         }
                                         else {
                                             user = (User)task.getResult().getValue(User.class);
                                             if(user.getRole().equals("user")) {
                                                 //Toast.makeText(context,user.getName(), Toast.LENGTH_SHORT).show();
                                                 Toast.makeText(context,"Пользователь зашёл", Toast.LENGTH_SHORT).show();
-                                                ControlFragment.changeFragmentToUser(user);
+                                                UserFragment fr = new UserFragment();
+                                                Bundle bundle = new Bundle();
+                                                bundle.putSerializable("1", user);
+                                                fr.setArguments(bundle);
+                                                callbacks.controlFragmentSelected(fr);
+                                                //ControlFragment.changeFragmentToUser(user);
                                             }else {
                                                 Toast.makeText(context,"Вы не являетесь обычным пользователем", Toast.LENGTH_SHORT).show();
                                                 FirebaseAuth.getInstance().signOut();
-                                                ControlFragment.changeFragmentToEntrance();
+                                                EntranceFragment fr = new EntranceFragment();
+                                                callbacks.controlFragmentSelected(fr);
+                                                //ControlFragment.changeFragmentToEntrance();
                                             }
                                         }
                                     }
@@ -128,6 +140,19 @@ public class EntranceUserFragment extends Fragment {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
+        callbacks = (Callbacks) context;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        callbacks = null;
     }
 
 }

@@ -18,8 +18,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.cardealership.R;
+import com.example.cardealership.ui.Callbacks;
 import com.example.cardealership.ui.ControlFragment;
 import com.example.cardealership.ui.account.User;
+import com.example.cardealership.ui.account.UserFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -36,6 +38,7 @@ public class RegistrationUserFragment extends Fragment {
     private FirebaseAuth mAuth;
     Context context;
     DatabaseReference mDataBase;
+    private Callbacks callbacks = null;
 
     @Override
     public void onAttach(Activity activity) {
@@ -83,7 +86,12 @@ public class RegistrationUserFragment extends Fragment {
                                     User newUser = new User(name, lastname, email, birthday, phone, "user", currentUser.getUid(), "");
                                     mDataBase = FirebaseDatabase.getInstance().getReference("Users").child(currentUser.getUid());
                                     mDataBase.setValue(newUser);
-                                    ControlFragment.changeFragmentToUser(newUser);
+                                    UserFragment fr = new UserFragment();
+                                    Bundle bundle = new Bundle();
+                                    bundle.putSerializable("1", newUser);
+                                    fr.setArguments(bundle);
+                                    callbacks.controlFragmentSelected(fr);
+                                    //ControlFragment.changeFragmentToUser(newUser);
                                 }else Toast.makeText(context,"При регистрации произошла ошибка.\nПопробуйте ещё раз", Toast.LENGTH_SHORT).show();
                             }
                         });
@@ -124,6 +132,19 @@ public class RegistrationUserFragment extends Fragment {
                 return false;
             }
         });
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        this.context = context;
+        callbacks = (Callbacks) context;
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        callbacks = null;
     }
 
 }
